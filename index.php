@@ -18,7 +18,9 @@
 		    mapboxgl.accessToken = 'pk.eyJ1IjoibmF5cmIiLCJhIjoiY2pyaGdhZXBtMWVycDN5cnp0Z2FwZTZidSJ9.WqOr51al1Wr_hxd2OGdfUA';
 		    var map = new mapboxgl.Map({
 		        container: 'map',
-		        style: 'mapbox://styles/mapbox/satellite-v9'
+		        style: 'mapbox://styles/mapbox/satellite-v9',
+		        center: [-4.4924989, 48.3362208],
+		        zoom: 11
 		    });
 		    var url = 'https://wanderdrone.appspot.com/';
 			map.on('load', function () {

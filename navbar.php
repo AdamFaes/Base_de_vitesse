@@ -14,7 +14,10 @@
       <a class="nav-item nav-link" href="records_perso.php">Records personnel</a>
       <a class="nav-item nav-link" href="records_globaux.php">Records globaux</a>
       <a class="nav-item nav-link" href="competition.php">Compétitons</a>
-      <a class="nav-item nav-link" href="mon_compte.php">Mon compte</a>
+      <span class="navbar-item">
+         <a class="nav-item nav-link" href="mon_compte.php">Mon compte</a>
+      </span>
+     
     </div>
   </div>
 

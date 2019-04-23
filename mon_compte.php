@@ -43,6 +43,7 @@
 	color: black;
 	font-size: xx-large;
 	font-family: Noto Sans, sans-serif;
+	text-align: center;
 }
 </style>
 
@@ -56,7 +57,7 @@
  			<div class="row justify-content-around my-row">
 
  				<div class="col-8 my-col">
-
+ 					<p class="my-text">Mes dernières performances</p>
  				</div>
 		
  			</div>
