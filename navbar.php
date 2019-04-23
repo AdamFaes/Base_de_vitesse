@@ -10,7 +10,7 @@
 
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="index.php">Carte <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="records_perso.php">Records personnel</a>
       <a class="nav-item nav-link" href="records_globaux.php">Records globaux</a>
       <a class="nav-item nav-link" href="competition.php">Compétitons</a>

@@ -67,7 +67,7 @@
         						<p class="card-text">Challenger vos amis ou des inconnus dans une compétion de vitesse en ligne droite sur 500m ! </p>
         						<br>
         						<!--Bouton lien-->
-        						<a class="btn my-btn" href="index.php"> Participer !</a>
+        						<a class="btn my-btn" href="participer.php"> Participer !</a>
       							</div>
      							<!--/.Card content-->
 
