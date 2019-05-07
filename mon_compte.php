@@ -3,12 +3,6 @@
  	  require_once("./header.php");
  	  require_once("./navbar.php");
 ?>
-
-<!DOCTYPE html>
-<?php 
- 	  require_once("./header.php");
- 	  require_once("./navbar.php");
-?>
  <style>
   
 
