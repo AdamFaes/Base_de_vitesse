@@ -2,6 +2,7 @@
 <?php 
  	  require_once("./header.php");
  	  require_once("./navbar.php");
+ 	  require_once("./auth.php")
 ?>
  <style>
 
@@ -46,7 +47,10 @@
  				<br>
  				<p class="text my-text">Record en kayak</p>
  				<br>
- 				<p class="text">BLABLAPHP</p>	
+ 				<?php 
+
+
+ 				?>	
  				</div>
 
  				<div class="col-3 my-col bg-primary justify-content-center text-center">

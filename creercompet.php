@@ -5,13 +5,22 @@
 ?>
  <style>
   input[type=submit]{
-  width: 185%;
+  width: 100%;
   padding: 10px 20px;
   margin: 50px 0;
   border: 3px solid #ccc;
   border-radius: 4px;
   background-color: #f1f1f1;
+}
 
+ input[type=number], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 4px 0;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
 }
 
  input[type=text], select {
@@ -97,25 +106,57 @@ input[type=text] {
  				<div class="col-8 my-col">
 
  					<p class="text-center my-text"> Créer votre compétition ! </p>
+          <form role="form" action="" method="POST">
 
-  					<form class="form-inline">
- 						
- 						<input type="text" id="Nom" name = "Nom" placeholder="Nom de la compétition">
- 							<select id="sport" name="sport" placeholder="Sport">
+ 						<input type="text" name = "nom" placeholder="Nom de la compétition">
+
+ 							<select name="sport" placeholder="Sport">
  								<option value="kayak">Canoë-Kayak</option>
  								<option value="voile">Voile</option>
  								<option value="planche">Planche à voile</option>
  								<option value="paddle">Paddle</option>
  								<option value="kite">Kitesurf</option>
  							</select>
- 						<input type="text" id="nbComp" name = "nbComp" placeholder="Nombre de participants : 1-100">
- 						<labe for="date">Date de la compétition</label>
-   						<input class="form-control" type="date" value="date" id="example-date-input">
+
+ 						  <input type="number" id="nb_participant" name = "nb_participant" min="2" max="100" placeholder="Nombre de participants : 2-100">
+
+   						<input class="form-control" type="date" value="date" name="jour" id="example-date-input">
+
+              <input type="time" id="time" name="heure">
+
    						<input type ="submit" value = "Créer la compétition">
- 					</form>
+ 					
+          </form>
  				</div>
 		
  			</div>
+
+      <?php
+        if (isset($_POST['submit']))
+      {
+
+          $nom=$_POST['nom'];
+          $sport=$_POST['sport'];
+          $nb_participant=$_POST['nb_participant'];
+          $date=$_POST['jour'];
+          $heure=$_POST['heure'];
+
+          $c = new mysqli("127.0.0.1","administrateur","123","base_de_vitesse");
+
+          $sql="INSERT INTO competition (sport,nom,nb_participant,jour,heure) VALUES ($sport, $nom, $nb_participant, $jour, $heure);";
+
+          if(!$c->query($sql))
+          {
+            printf("Message d'erreur : %s\n", $c->error);
+          }
+
+          mysqli_close($c);
+      }
+
+
+
+      ?>
+      
 
  			<div class="row espacebas">
  			</div>
