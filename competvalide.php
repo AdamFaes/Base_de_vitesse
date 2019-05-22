@@ -59,7 +59,10 @@ input[type=text] {
   transition: 0.5s;
   outline: none;
 }
+.my-btn{
 
+  color:white;
+}
  .my-container{
  	border: black;
  }
@@ -69,7 +72,7 @@ input[type=text] {
 }
 
 .espacebas{
-	margin-top: 350px;
+	margin-top: 500px;
 }
 
 .my-row{
@@ -79,7 +82,7 @@ input[type=text] {
 	margin-left: 15px;
 
 
-	height: 300px;
+	height: 150px;
 }
 
 .my-col{
@@ -104,37 +107,16 @@ input[type=text] {
 
  			<div class="row justify-content-around my-row">
 
- 				<div class="col-8 my-col">
+ 				<div class="col-6 my-col ">
 
- 					<p class="text-center my-text"> Créer votre compétition ! </p>
-          
-          <form role="form" action="bdd/save_compet.php" method="POST">
-
- 						<input type="text" name = "nom" placeholder="Nom de la compétition">
-
- 							<select name="sport" placeholder="Sport">
- 								<option value="kayak">Canoë-Kayak</option>
- 								<option value="voile">Voile</option>
- 								<option value="planche">Planche à voile</option>
- 								<option value="paddle">Paddle</option>
- 								<option value="kite">Kitesurf</option>
- 							</select>
-
- 						  <input type="number" id="nb_participant" name = "nb_participant" min="2" max="100" placeholder="Nombre de participants : 2-100">
-
-   						<input class="form-control" type="date" value="date" name="jour" id="example-date-input">
-
-              <input type="time" id="time" name="heure">
-
-   						<input type ="submit" name ="submit" value = "Créer la compétition">
- 					
-          </form>
- 				</div>
-		
- 			</div>    
+ 					<p class="text-center my-text"></br>Votre compétition à bien été crée ! </p>
+          <a class="btn my-btn" href="index.php">Retour accueil !</a>
+ 			  </div>
+      
+      </div>      
 
  			<div class="row espacebas">
- 			</div>
+      </div>
  			<div class="row justify-content-around espace">	
  			</div>
 

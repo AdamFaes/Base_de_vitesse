@@ -333,7 +333,7 @@ Comptez-vous participer à des compétitions ?<br />
                       <button type="submit" name="submit" class="btn">S'inscrire !</button>
                         </form>
                 </div>
-                <div><a style = "color:white;" href="connexion.php"> Déjà inscris ? Connectez vous ici ! </a></div>
+                <div><a style = "color:white:;" href="connexion.php"> Déjà inscris ? Connectez vous ici ! </a></div>
                 </div>
             </div>
         </div>
