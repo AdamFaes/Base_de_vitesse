@@ -113,11 +113,11 @@ input[type=text] {
  						<input type="text" name = "nom" placeholder="Nom de la compétition">
 
  							<select name="sport" placeholder="Sport">
- 								<option value="kayak">Canoë-Kayak</option>
- 								<option value="voile">Voile</option>
- 								<option value="planche">Planche à voile</option>
- 								<option value="paddle">Paddle</option>
- 								<option value="kite">Kitesurf</option>
+ 								<option value="Canoë-Kayak">Canoë-Kayak</option>
+ 								<option value="Voile">Voile</option>
+ 								<option value="Planche a voile">Planche à voile</option>
+ 								<option value="Paddle">Paddle</option>
+ 								<option value="Kitesurf">Kitesurf</option>
  							</select>
 
  						  <input type="number" id="nb_participant" name = "nb_participant" min="2" max="100" placeholder="Nombre de participants : 2-100">

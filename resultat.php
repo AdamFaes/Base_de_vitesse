@@ -2,8 +2,17 @@
 <?php 
  	  require_once("./header.php");
  	  require_once("./navbar.php");
+    require_once("./login_bdd.php");
 ?>
 <style>
+  input[type=text]{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 50px 0;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
 
  .my-container{
  	border: black;
@@ -49,16 +58,48 @@
       <div class="row espace">
       </div>
       <div class="row justify-content-around">
-        <div class="col-3 my-col">
-          <a>Date de la compétition</a>
-        </div>
+
+  
+
+          <?php
+          $query="SELECT nom, id FROM competition;";
+          $result=$con -> query($query);
+          $option='';
+          if(!$result)
+                  {
+                    echo "Aucune compétition n'a été crée";
+                  }
+
+                else if ($result->num_rows>0)
+                  {
+                    while ($row = $result -> fetch_assoc())
+                    {
+                      $option .= '<option value= "'. $row['id'].'">'.$row['nom'].'</option>';
+                    }
+                  } 
+          ?>
 
         <div class="col-3 my-col">
-          <a>Nom de la compétition</a>
+        <form>
+            <select id="slt_compet">
+              <option value="">Choisir une competition</option>
+
+              <?php
+                echo $option; 
+              ?>
+
+            </select>
+            
         </div>
 
+
         <div class="col-3 my-col">
-          <a>Sport</a>
+
+
+          <select id="slt_sport">
+          </select>
+
+
         </div>
       </div> 
        
@@ -79,36 +120,7 @@
               </tr> 
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Adam</td>
-                <td>Faes</td>
-                <td>50km/h</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Adam</td>
-                <td>Faes</td>
-                <td>50km/h</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Adam</td>
-                <td>Faes</td>
-                <td>50km/h</td>
-              </tr> 
-              <tr>
-                <th scope="row">1</th>
-                <td>Adam</td>
-                <td>Faes</td>
-                <td>50km/h</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Adam</td>
-                <td>Faes</td>
-                <td>50km/h</td>
-              </tr
+          
 
 
               
@@ -130,3 +142,21 @@
  </body>
  
  </html>
+
+  <script type="text/javascript">
+   $("#slt_compet").change(function() {
+    //alert("compet change: " + $("#slt_compet").val());
+    id_compet=$("#slt_compet").val();
+
+    $.post("./bdd/get_sport_from_compet.php",{id:id_compet},maj_sport);
+
+    function maj_sport(data)
+    {
+      //alert(data);
+      $("#slt_sport").html(data);
+    }
+
+
+   });
+
+ </script>
